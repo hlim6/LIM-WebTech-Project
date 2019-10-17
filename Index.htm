@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Homepage</title>
+    <style type="text/css">
+      .pageheader {
+        text-align: center;
+      }
+      .navbar {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        margin: 100px 100px 0px 100px;
+        font-size: large;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .navlink {
+        color: inherit;
+        text-decoration: none;
+        outline: none;
+        padding: 30px;
+      }
+      .homeaudio {
+        position: fixed;
+        top: 0;
+        right: 0;
+      }
+      .maincontent {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        margin: 10px auto 10px auto;
+        width: 50%;
+      }
+      .beautifulmind {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: xx-large;
+        font-style: italic;
+        font-weight: bold;
+      }
+      .staytuned {
+          font-weight: bold;
+      }
+      .hotspot {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="pageheader">Home</h1>
+    <nav>
+      <div>
+        <ul class="navbar">
+          <li><a class="navlink" href="Index.htm">Home</a></li>
+          <li><a class="navlink" href="moviereviews.html">Movie Reviews</a></li>
+          <li><a class="navlink" href="contactpage.html">Contact Me</a></li>
+          <li><a class="navlink" href="sitemap.html">Site Map</a></li>
+        </ul>
+      </div>
+    </nav>
+    <hr />
+    <p class="maincontent">
+      Over the next few weeks, this page will feature movie recommendations,
+      quick reviews, and more content hand-picked by me. So for all you college
+      students looking for good movie recommendations, I hope to make my website
+      the go-to spot for suggestions. <br /><span class="staytuned">Stay tuned!</span> <br />
+      For now, here is one of my favorite movies of all time: <br />
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/YWwAOutgWBQ"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <br />
+      <span class="beautifulmind">A Beautiful Mind</span>
+    </p>
+    <hr />
+    <map name="theatre">
+        <area shape="rect" coords="111, 40, 395, 207" href="moviereviews.html" alt="reviews" title="Feeling a movie but don't know what to watch?">
+        <area shape="rect" coords="399, 245, 439, 307" href="https://www.youtube.com/watch?v=ZZyBaFYFySk" alt="DonnieDarko" title="Feeling a thriller?">
+    </map>
+    <img class="hotspot" src="files/theatremap.jpg" usemap="#theatre" alt="theatresite" title="Hover around for links!">
+    
+    <audio class="homeaudio" controls>
+      <source src="files/Hans Zimmer  Hes a Pirate.mp3" type="audio/mpeg" />
+    </audio>
+  </body>
+</html>

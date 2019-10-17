@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contact Me</title>
+    <style type="text/css">
+      .pageheader {
+        text-align: center;
+      }
+      .navbar {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        margin: 100px 100px 0px 100px;
+        font-size: large;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .navlink {
+        color: inherit;
+        text-decoration: none;
+        outline: none;
+        padding: 30px;
+      }
+      table {
+          text-align: center;
+          margin: 10px auto 10px auto;
+          width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="pageheader">Contact Me</h1>
+    <nav>
+      <div>
+        <ul class="navbar">
+          <li><a class="navlink" href="Index.htm">Home</a></li>
+          <li><a class="navlink" href="moviereviews.html">Movie Reviews</a></li>
+          <li><a class="navlink" href="contactpage.html">Contact Me</a></li>
+          <li><a class="navlink" href="sitemap.html">Site Map</a></li>
+        </ul>
+      </div>
+    </nav>
+    <hr />
+    <form method="POST" action="mailto:hlim6@babson.edu">
+      <table>
+        <tr>
+          <td>
+              <img src="files/talkingtome.gif" alt="talkingtome" title="If yes, send a message!">
+            <p>
+              Last Name:
+              <input
+                type="text"
+                name="last-name"
+                size="25"
+                maxlength="25"
+                placeholder="Last Name"
+              />
+              First Name:
+              <input
+                type="text"
+                name="first-name"
+                size="25"
+                maxlength="25"
+                placeholder="First Name"
+              />
+            </p>
+            <p>
+              Send me your favorite movie and maybe I will add it to the
+              homepage!
+            </p>
+            <p>
+              <textarea
+                name="comments"
+                cols="29"
+                rows="5"
+                placeholder="You talking to me??"
+              ></textarea>
+            </p>
+
+            <button type="submit" value="submit">
+              HECK YEAH
+            </button>
+            <button type="reset" value="reset">
+              CLEAR
+            </button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
