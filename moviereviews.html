@@ -5,16 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Movie Reviews</title>
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
     <link rel="stylesheet" href="navbar.css" type="text/css" />
     <style type="text/css">
-      .pageheader {
+      #pageheader {
         text-align: center;
       }
       .maincontent {
@@ -30,11 +23,31 @@
         font-style: italic;
         font-weight: bold;
       }
-      .movieposter {
+      #movieposter {
         width: 25%;
       }
     </style>
   </head>
+  <script type="text/javascript">
+    function change(x) {
+      let moviePoster = document.getElementById("movieposter");
+      let pageHeader = document.getElementById("pageheader");
+
+      if (x == "movieposter") {
+        pageHeader.innerHTML = "RECOMMENDED MOVIE OF THE MONTH";
+        pageHeader.style.color = "#E50914";
+      }
+    }
+    function normal(x) {
+      let moviePoster = document.getElementById("movieposter");
+      let pageHeader = document.getElementById("pageheader");
+
+      if (x == "movieposter") {
+        pageHeader.innerHTML = "Movie Reviews";
+        pageHeader.style.color = "white";
+      }
+    }
+  </script>
   <body>
     <nav>
       <div class="navdiv">
@@ -57,14 +70,16 @@
         </ul>
       </div>
     </nav>
-    <h1 class="pageheader">Movie Reviews</h1>
+    <h1 id="pageheader">Movie Reviews</h1>
 
     <p class="maincontent">
       <img
-        class="movieposter"
+        id="movieposter"
         src="files/russellcrowe.jpg"
         alt="movieposter"
         title="Poster of A Beautiful Mind"
+        onmouseover="change(this.id)"
+        onmouseout="normal(this.id)"
       />
       <br />
       A Review of <span class="beautifulmind">A Beautiful Mind</span> By Todd
@@ -87,62 +102,6 @@
         >Read more</a
       >
     </p>
-    <div class="card-deck">
-      <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap" />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap" />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This card has supporting text below as a natural lead-in to
-            additional content.
-          </p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap" />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This card has even longer content than the
-            first to show that equal height action.
-          </p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-    </div>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
+    <hr>
   </body>
 </html>
