@@ -5,24 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Movie Reviews</title>
+    <link rel="stylesheet" href="navbar.css" type="text/css" />
     <style type="text/css">
       .pageheader {
         text-align: center;
-      }
-      .navbar {
-        list-style-type: none;
-        display: flex;
-        justify-content: center;
-        margin: 100px 100px 0px 100px;
-        font-size: large;
-        color: black;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .navlink {
-        color: inherit;
-        text-decoration: none;
-        outline: none;
-        padding: 30px;
       }
       .maincontent {
         text-align: center;
@@ -38,25 +24,37 @@
         font-weight: bold;
       }
       .movieposter {
-          width: 25%;
+        width: 25%;
       }
     </style>
   </head>
   <body>
-    <h1 class="pageheader">Movie Reviews</h1>
     <nav>
-      <div>
+      <div class="navdiv">
+        <a href="index.htm"
+          ><img class="sitelogo" src="files/sitelogo.png" alt="HyojinReviews"
+        /></a>
         <ul class="navbar">
-          <li><a class="navlink" href="Index.htm">Home</a></li>
-          <li><a class="navlink" href="moviereviews.html">Movie Reviews</a></li>
-          <li><a class="navlink" href="contactpage.html">Contact Me</a></li>
-          <li><a class="navlink" href="sitemap.html">Site Map</a></li>
+          <li class="navsubject">
+            <a class="navlink" href="index.htm">Home</a>
+          </li>
+          <li class="navsubject">
+            <a class="navlink" href="moviereviews.html">Movie Reviews</a>
+          </li>
+          <li class="navsubject">
+            <a class="navlink" href="contactpage.html">Contact Me</a>
+          </li>
+          <li class="navsubject">
+            <a class="navlink" href="sitemap.html">Site Map</a>
+          </li>
         </ul>
       </div>
     </nav>
-    <hr />
+    <h1 class="pageheader">Movie Reviews</h1>
+
     <p class="maincontent">
-      <img class="movieposter"
+      <img
+        class="movieposter"
         src="files/russellcrowe.jpg"
         alt="movieposter"
         title="Poster of A Beautiful Mind"
@@ -82,5 +80,48 @@
         >Read more</a
       >
     </p>
+
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer.
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This card has supporting text below as a natural lead-in to
+            additional content.
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This card has even longer content than the
+            first to show that equal height action.
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

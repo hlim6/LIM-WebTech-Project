@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  background-color: #141414;
+  color: white;
+}
+div.navdiv {
+  background-color: black;
+  height: 90px;
+}
+.navbar {
+  list-style-type: none;
+  padding-top: 34.2px;
+  padding-bottom: 34.2px;
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  float: right;
+}
+li.navsubject {
+    display: inline-block;
+}
+.navlink {
+  text-decoration: none;
+  padding: 10px 15px 10px 15px;
+  color: white;
+  font-size: 21px;
+  font-family: sans-serif;
+}
+.navlink:hover {
+    color: #E50914;
+}
+.sitelogo {
+    height: 60%;
+    float: left;
+    padding-left: 100px;
+    padding-top: 20px;
+}
