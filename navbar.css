@@ -37,6 +37,8 @@ li.navsubject {
     padding-top: 20px;
 }
 hr {
-    border: 1px solid #E50914;
+    border: 2px solid #E50914;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 

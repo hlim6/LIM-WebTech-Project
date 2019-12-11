@@ -4,21 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="keywords"
+      content="movie; movies; a beautiful mind; theatre; avengers; fight club; dark knight; forest gump; hyojin; reviews; movie reviews; watchlist; parasite; us; how to train your dragon; blockbuster; action; adventure; drama; thriller"
+    />
+    <meta
+      name="description"
+      content="Welcome! This site will feature movie recommendations, quick reviews, and more
+    content hand-picked by Hyojin."
+    />
     <title>Movie Reviews</title>
     <link rel="stylesheet" href="navbar.css" type="text/css" />
+    <link rel="stylesheet" href="table.css" type="text/css" />
     <style type="text/css">
       #pageheader {
         text-align: center;
+        font-family: sans-serif;
       }
       .maincontent {
         text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: sans-serif;
         font-size: large;
         width: 50%;
         margin: 10px auto 10px auto;
       }
       .beautifulmind {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: sans-serif;
         font-size: large;
         font-style: italic;
         font-weight: bold;
@@ -26,25 +37,97 @@
       #movieposter {
         width: 25%;
       }
+      #watchlist {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+      }
+      #lastdiv {
+        margin-bottom: 50px;
+      }
     </style>
   </head>
+  <!-- Changing text and style via Javascript: Mouseover and Mouseout -->
   <script type="text/javascript">
     function change(x) {
       let moviePoster = document.getElementById("movieposter");
       let pageHeader = document.getElementById("pageheader");
+      let nolan = document.getElementById("nolan");
+      let fincher = document.getElementById("fincher");
+      let scorsese = document.getElementById("scorsese");
+      let tarantino = document.getElementById("tarantino");
+      let spielberg = document.getElementById("spielberg");
+      let director = document.getElementById("director");
 
       if (x == "movieposter") {
         pageHeader.innerHTML = "RECOMMENDED MOVIE OF THE MONTH";
         pageHeader.style.color = "#E50914";
       }
+      else if (x == "nolan") {
+        nolan.src = "files/inception.jpg"
+        director.innerHTML = "Notable Nolan Films: Inception, Dark Knight Series, Interstellar, etc."
+        director.style.color = "#E50914"
+      }
+      else if (x == "fincher") {
+        fincher.src = "files/fightclub.jpg"
+        director.innerHTML = "Notable Fincher Films: Fight Club, Seven, Zodiac, etc."
+        director.style.color = "#E50914"
+      }
+      else if (x == "scorsese") {
+        scorsese.src = "files/irishman.jpg"
+        director.innerHTML = "Notable Scorsese Films: The Irishman, Goodfellas, Taxi Driver, etc."
+        director.style.color = "#E50914"
+      }
+      else if (x == "tarantino") {
+        tarantino.src = "files/pulpfiction.jpg"
+        director.innerHTML = "Notable Tarantino Films: Pulp Fiction, Inglorious Bastards, Django Unchained, etc."
+        director.style.color = "#E50914"
+      }
+      else if (x == "spielberg") {
+        spielberg.src = "files/jurassic.jpg"
+        director.innerHTML = "Notable Spielberg Films: Jurassic Park Series, Indiana Jones Series, Jaws, etc."
+        director.style.color = "#E50914"
+      }
     }
     function normal(x) {
       let moviePoster = document.getElementById("movieposter");
       let pageHeader = document.getElementById("pageheader");
+      let nolan = document.getElementById("nolan");
+      let fincher = document.getElementById("fincher");
+      let scorsese = document.getElementById("scorsese");
+      let tarantino = document.getElementById("tarantino");
+      let spielberg = document.getElementById("spielberg");
+      let director = document.getElementById("director");
 
       if (x == "movieposter") {
         pageHeader.innerHTML = "Movie Reviews";
         pageHeader.style.color = "white";
+      }
+      else if (x == "nolan") {
+        nolan.src = "files/nolan.jpg"
+        director.innerHTML = "By Director"
+        director.style.color = "white"
+      }
+      else if (x == "fincher") {
+        fincher.src = "files/fincher.jpg"
+        director.innerHTML = "By Director"
+        director.style.color = "white"
+      }
+      else if (x == "scorsese") {
+        scorsese.src = "files/martin.jpg"
+        director.innerHTML = "By Director"
+        director.style.color = "white"
+      }
+      else if (x == "tarantino") {
+        tarantino.src = "files/quentin.jpg"
+        director.innerHTML = "By Director"
+        director.style.color = "white"
+      }
+      else if (x == "spielberg") {
+        spielberg.src = "files/spielberg.jpg"
+        director.innerHTML = "By Director"
+        director.style.color = "white"
       }
     }
   </script>
@@ -102,6 +185,375 @@
         >Read more</a
       >
     </p>
-    <hr>
+    <p class="maincontent">
+      Each month, a new movie review will be posted so stay up to date! <br />
+      In the meantime, enjoy the selected watchlist.
+    </p>
+    <img
+      id="watchlist"
+      src="files/watchlist.png"
+      alt="watchlist"
+      title="Watchlist"
+    />
+    <hr />
+    <div>
+      <table>
+        <tr>
+          <td colspan="5"><h1 class="h1table">Recent Movies</h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              class="tableimg"
+              src="files/howtodragon.jpg"
+              alt="How to Train Your Dragon 3"
+              title="How to Train Your Dragon 3"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/joker.jpg"
+              alt="Joker"
+              title="Joker"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/parasite.jpg"
+              alt="Parasite"
+              title="Parasite"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/irishman.jpg"
+              alt="Irishman"
+              title="Irishman"
+            />
+          </td>
+          <td>
+            <img class="tableimg" src="files/us.jpg" alt="Us" title="Us" />
+          </td>
+        </tr>
+        <tr>
+          <td class="title">
+            How to Train Your Dragon: <br />
+            The Hidden World
+          </td>
+          <td class="title">Joker</td>
+          <td class="title">Parasite</td>
+          <td class="title">The Irishman</td>
+          <td class="title">Us</td>
+        </tr>
+      </table>
+    </div>
+    <hr />
+    <div>
+      <table>
+        <tr>
+          <td colspan="5"><h1 class="h1table" id="director">By Director</h1></td>
+        </tr>
+        <tr>
+          <td>
+            <a href="https://www.imdb.com/name/nm0634240/?ref_=rvi_nm"
+              ><img
+                class="tableimg"
+                src="files/nolan.jpg"
+                alt="nolan"
+                title="Christopher Nolan"
+                id="nolan"
+                onmouseover="change(this.id)"
+                onmouseout="normal(this.id)"
+            /></a>
+          </td>
+          <td>
+            <a href="https://www.imdb.com/name/nm0000399/"
+              ><img
+                class="tableimg"
+                src="files/fincher.jpg"
+                alt="fincher"
+                title="David Fincher"
+                id="fincher"
+                onmouseover="change(this.id)"
+                onmouseout="normal(this.id)"
+            /></a>
+          </td>
+          <td>
+            <a href="https://www.imdb.com/name/nm0000217/?ref_=nv_sr_srsg_0"
+              ><img
+                class="tableimg"
+                src="files/martin.jpg"
+                alt="MS"
+                title="Martin Scorsese"
+                id="scorsese"
+                onmouseover="change(this.id)"
+                onmouseout="normal(this.id)"
+            /></a>
+          </td>
+          <td>
+            <a href="https://www.imdb.com/name/nm0000233/?ref_=nv_sr_srsg_0"
+              ><img
+                class="tableimg"
+                src="files/quentin.jpg"
+                alt="Quentin"
+                title="Quentin Tarantino"
+                id="tarantino"
+                onmouseover="change(this.id)"
+                onmouseout="normal(this.id)"
+            /></a>
+          </td>
+          <td>
+            <a href="https://www.imdb.com/name/nm0000229/?ref_=nv_sr_srsg_0"
+              ><img
+                class="tableimg"
+                src="files/spielberg.jpg"
+                alt="Spielberg"
+                title="Steven Spielberg"
+                id="spielberg"
+                onmouseover="change(this.id)"
+                onmouseout="normal(this.id)"
+            /></a>
+          </td>
+        </tr>
+        <tr>
+          <td class="title">Christopher Nolan</td>
+          <td class="title">David Fincher</td>
+          <td class="title">Martin Scorsese</td>
+          <td class="title">Quentin Tarantino</td>
+          <td class="title">Steven Spielberg</td>
+        </tr>
+      </table>
+    </div>
+    <hr />
+    <div>
+      <table>
+        <tr>
+          <td colspan="5"><h1 class="h1table">Action & Adventure</h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              class="tableimg"
+              src="files/braveheart.jpg"
+              alt="Braveheart"
+              title="Braveheart"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/darkknight.jpg"
+              alt="DarkKnight"
+              title="The Dark Knight"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/gladiator.jpg"
+              alt="Gladiator"
+              title="Gladiator"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/matrix.jpg"
+              alt="Matrix"
+              title="The Matrix"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/inglorious.jpg"
+              alt="IB"
+              title="Inglorious Bastards"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="title">Braveheart</td>
+          <td class="title">Dark Knight Series</td>
+          <td class="title">Gladiator</td>
+          <td class="title">The Matrix Series</td>
+          <td class="title">Inglorious Bastards</td>
+        </tr>
+      </table>
+    </div>
+    <hr />
+    <div>
+      <table>
+        <tr>
+          <td colspan="5"><h1 class="h1table">Blockbuster</h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              class="tableimg"
+              src="files/avengers.jpg"
+              alt="Avengers"
+              title="Avengers"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/mi.jpg"
+              alt="MI"
+              title="Mission Impossible"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/pirates.jpg"
+              alt="PoC"
+              title="Pirates of the Caribbean"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/transformers.jpg"
+              alt="Transformers"
+              title="Transformers"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/starwars.jpg"
+              alt="Star Wars"
+              title="Star Wars"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="title">Marvel's Avengers</td>
+          <td class="title">Mission Impossible</td>
+          <td class="title">Pirates of the Caribbean</td>
+          <td class="title">Transformers Series</td>
+          <td class="title">Star Wars</td>
+        </tr>
+      </table>
+    </div>
+    <hr />
+    <div>
+      <table>
+        <tr>
+          <td colspan="5"><h1 class="h1table">Drama</h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              class="tableimg"
+              src="files/fightclub.jpg"
+              alt="Fight Club"
+              title="Fight Club"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/forest.jpg"
+              alt="Forest Gump"
+              title="Forest Gump"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/goodwill.jpg"
+              alt="goodwill"
+              title="Good Will Hunting"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/pulpfiction.jpg"
+              alt="pulpfiction"
+              title="Pulp Fiction"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/shawshank.jpg"
+              alt="Shawshank"
+              title="The Shawshank Redemption"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="title">Fight Club</td>
+          <td class="title">Forest Gump</td>
+          <td class="title">Good Will Hunting</td>
+          <td class="title">Pulp Fiction</td>
+          <td class="title">The Shawshank Redemption</td>
+        </tr>
+      </table>
+    </div>
+    <hr />
+    <div id="lastdiv">
+      <table>
+        <tr>
+          <td colspan="5"><h1 class="h1table">Thriller</h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              class="tableimg"
+              src="files/donnie.jpg"
+              alt="donnie"
+              title="Donnie Darko"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/inception.jpg"
+              alt="Inception"
+              title="Inception"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/prestige.jpg"
+              alt="prestige"
+              title="The Prestige"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/silence.jpg"
+              alt="silence"
+              title="The Silence of the Lambs"
+            />
+          </td>
+          <td>
+            <img
+              class="tableimg"
+              src="files/suspects.jpg"
+              alt="suspects"
+              title="The Usual Suspects"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td class="title">Donnie Darko</td>
+          <td class="title">Inception</td>
+          <td class="title">The Prestige</td>
+          <td class="title">The Silence of the Lambs</td>
+          <td class="title">The Usual Suspects</td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>

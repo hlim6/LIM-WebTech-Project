@@ -4,18 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="keywords"
+      content="movie; movies; a beautiful mind; theatre; avengers; fight club; dark knight; forest gump; hyojin; reviews; movie reviews; watchlist; parasite; us; how to train your dragon; blockbuster; action; adventure; drama; thriller"
+    />
+    <meta
+      name="description"
+      content="Welcome! This site will feature movie recommendations, quick reviews, and more
+  content hand-picked by Hyojin."
+    />
     <title>Contact Me</title>
     <link rel="stylesheet" href="navbar.css" type="text/css" />
     <style type="text/css">
       .pageheader {
         text-align: center;
+        font-family: sans-serif;
       }
       table {
         text-align: center;
-        margin: 10px auto 10px auto;
+        margin: 200px auto 10px auto;
         width: 50%;
+        font-family: sans-serif;
+      }
+      #animate {
+        position: relative;
+        width: 100px;
+        height: 100px;
       }
     </style>
+    <!-- Validating a Form -->
+    <script type="text/javascript">
+      function validate() {
+        if (document.getElementById("last").value == "") {
+          alert("Last Name is Required!");
+          document.getElementById("last").focus();
+        } else if (document.getElementById("first").value == "") {
+          alert("First Name is Required!");
+          document.getElementById("first").focus();
+        } else if (document.getElementById("txt").value == "") {
+          alert("Textbox must be filled.");
+          document.getElementById("txt").focus();
+        } else {
+          return true;
+        }
+        return false;
+      }
+    </script>
+    <!-- Additional animations using jquery -->
+    <script
+      crossorigin="anonymous"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(function() {
+        $(document).ready(function(e) {
+          var width = $(document).width();
+
+          function goRight() {
+            $("#animate").animate(
+              {
+                left: width
+              },
+              5000,
+              function() {
+                setTimeout(goLeft, 50);
+              }
+            );
+          }
+          function goLeft() {
+            $("#animate").animate(
+              {
+                left: 0
+              },
+              5000,
+              function() {
+                setTimeout(goRight, 50);
+              }
+            );
+          }
+          setTimeout(goRight, 50);
+        });
+      });
+    </script>
   </head>
   <body>
     <nav>
@@ -24,28 +95,43 @@
           ><img class="sitelogo" src="files/sitelogo.png" alt="HyojinReviews"
         /></a>
         <ul class="navbar">
-          <li class="navsubject"><a class="navlink" href="index.htm">Home</a></li>
-          <li class="navsubject"><a class="navlink" href="moviereviews.html">Movie Reviews</a></li>
-          <li class="navsubject"><a class="navlink" href="contactpage.html">Contact Me</a></li>
-          <li class="navsubject"><a class="navlink" href="sitemap.html">Site Map</a></li>
+          <li class="navsubject">
+            <a class="navlink" href="index.htm">Home</a>
+          </li>
+          <li class="navsubject">
+            <a class="navlink" href="moviereviews.html">Movie Reviews</a>
+          </li>
+          <li class="navsubject">
+            <a class="navlink" href="contactpage.html">Contact Me</a>
+          </li>
+          <li class="navsubject">
+            <a class="navlink" href="sitemap.html">Site Map</a>
+          </li>
         </ul>
       </div>
     </nav>
     <h1 class="pageheader">Contact Me</h1>
-
-    <form method="POST" action="mailto:hlim6@babson.edu">
+    <div id="animate">
+      <img
+        src="files/talkingtome.gif"
+        alt="talkingtome"
+        title="If yes, send a message!"
+      />
+    </div>
+    <form
+      id="contactMe"
+      method="POST"
+      action="mailto:hlim6@babson.edu"
+      onsubmit="return validate()"
+    >
       <table>
         <tr>
           <td>
-            <img
-              src="files/talkingtome.gif"
-              alt="talkingtome"
-              title="If yes, send a message!"
-            />
             <p>
               Last Name:
               <input
                 type="text"
+                id="last"
                 name="last-name"
                 size="25"
                 maxlength="25"
@@ -54,6 +140,7 @@
               First Name:
               <input
                 type="text"
+                id="first"
                 name="first-name"
                 size="25"
                 maxlength="25"
@@ -70,15 +157,14 @@
                 cols="29"
                 rows="5"
                 placeholder="You talking to me??"
+                id="txt"
               ></textarea>
             </p>
 
-            <button type="submit" value="submit">
-              HECK YEAH
-            </button>
-            <button type="reset" value="reset">
-              CLEAR
-            </button>
+            <input type="submit" value="submit" name="submit" />
+            HECK YEAH
+            <input type="reset" value="reset" name="reset" />
+            CLEAR
           </td>
         </tr>
       </table>

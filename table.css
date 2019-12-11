@@ -1,0 +1,24 @@
+table {
+  font-family: sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.h1table {
+  margin-top: 0;
+}
+.tableimg {
+  border: 2px solid #e50914;
+  width: 178px;
+  height: 283px;
+}
+td.title {
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+}
+tr,
+td {
+  padding-right: 30px;
+  padding-left: 30px;
+}

@@ -2,13 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="keywords"
+      content="movie; movies; a beautiful mind; theatre; avengers; fight club; dark knight; forest gump; hyojin; reviews; movie reviews; watchlist; parasite; us; how to train your dragon; blockbuster; action; adventure; drama; thriller"
+    />
+    <meta
+      name="description"
+      content="Welcome! This site will feature movie recommendations, quick reviews, and more
+    content hand-picked by Hyojin."
+    />
     <title>Homepage</title>
+    <!-- Incorporation of both external and Internal stylesheets -->
     <link rel="stylesheet" href="navbar.css" type="text/css" />
     <style type="text/css">
       .pageheader {
         text-align: center;
+        font-family: sans-serif;
       }
       .homeaudio {
         position: fixed;
@@ -17,13 +31,13 @@
       }
       .maincontent {
         text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: sans-serif;
         font-size: large;
         margin: 10px auto 10px auto;
         width: 50%;
       }
       .beautifulmind {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: sans-serif;
         font-size: xx-large;
         font-style: italic;
         font-weight: bold;
@@ -37,30 +51,128 @@
         margin-right: auto;
         width: auto;
       }
+      #movie-slide {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 338px;
+        height: 500px;
+      }
+      #movie-title {
+        text-align: center;
+        font-family: sans-serif;
+        font-size: x-large;
+        font-style: italic;
+      }
+      #watchlist {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+      }
     </style>
+    <!-- Javascript Slideshow onload-->
+    <script type="text/javascript">
+      const slides = [
+        "files/avengers.jpg",
+        "files/braveheart.jpg",
+        "files/darkknight.jpg",
+        "files/donnie.jpg",
+        "files/fightclub.jpg",
+        "files/forest.jpg",
+        "files/gladiator.jpg",
+        "files/goodwill.jpg",
+        "files/howtodragon.jpg",
+        "files/inception.jpg",
+        "files/inglorious.jpg",
+        "files/irishman.jpg",
+        "files/joker.jpg",
+        "files/matrix.jpg",
+        "files/mi.jpg",
+        "files/parasite.jpg",
+        "files/pirates.jpg",
+        "files/prestige.jpg",
+        "files/pulpfiction.jpg",
+        "files/shawshank.jpg",
+        "files/silence.jpg",
+        "files/starwars.jpg",
+        "files/suspects.jpg",
+        "files/transformers.jpg",
+        "files/us.jpg"
+      ];
+      const movieTitles = [
+        "Avengers Endgame",
+        "Braveheart",
+        "The Dark Knight Series",
+        "Donnie Darko",
+        "Fight Club",
+        "Forest Gump",
+        "Gladiator",
+        "Good Will Hunting",
+        "How to Train Your Dragon: The Hidden World",
+        "Inception",
+        "Inglorious Bastards",
+        "The Irishman",
+        "Joker",
+        "Matrix Series",
+        "Mission Impossible Series",
+        "Parasite",
+        "Pirates of the Caribbean Series",
+        "The Prestige",
+        "Pulp Fiction",
+        "The Shawshank Redemption",
+        "The Silence of the Lambs",
+        "Star Wars Series",
+        "The Usual Suspects",
+        "Transformers Series",
+        "Us"
+      ];
+
+      let i = 0;
+
+      function slideShow() {
+        let movieSlide = document.getElementById("movie-slide");
+        if (i == slides.length) {
+          i = 0;
+        }
+        movieSlide.src = slides[i];
+        document.getElementById("movie-title").innerHTML = movieTitles[i];
+        i++;
+        setTimeout("slideShow()", 1500);
+      }
+    </script>
   </head>
-  <body>
+  <body onload="slideShow()">
     <nav>
       <div class="navdiv">
-        <a href="index.htm"><img class="sitelogo" src="files/sitelogo.png" alt="HyojinReviews"></a>
+        <a href="index.htm"
+          ><img class="sitelogo" src="files/sitelogo.png" alt="HyojinReviews"
+        /></a>
         <ul class="navbar">
-          <li class="navsubject"><a class="navlink" href="index.htm">Home</a></li>
-          <li class="navsubject"><a class="navlink" href="moviereviews.html">Movie Reviews</a></li>
-          <li class="navsubject"><a class="navlink" href="contactpage.html">Contact Me</a></li>
-          <li class="navsubject"><a class="navlink" href="sitemap.html">Site Map</a></li>
+          <li class="navsubject">
+            <a class="navlink" href="index.htm">Home</a>
+          </li>
+          <li class="navsubject">
+            <a class="navlink" href="moviereviews.html">Movie Reviews</a>
+          </li>
+          <li class="navsubject">
+            <a class="navlink" href="contactpage.html">Contact Me</a>
+          </li>
+          <li class="navsubject">
+            <a class="navlink" href="sitemap.html">Site Map</a>
+          </li>
         </ul>
       </div>
     </nav>
     <h1 class="pageheader">Home</h1>
     <p class="maincontent">
-      Over the next few weeks, this page will feature movie recommendations,
-      quick reviews, and more content hand-picked by me. So for all you college
-      students looking for good movie recommendations, I hope to make my website
-      the go-to spot for suggestions. <br /><span class="staytuned"
-        >Stay tuned!</span
-      >
+      Welcome to HyojinReviews! <br />
+      This page will feature movie recommendations, quick reviews, and more
+      content hand-picked by me. So for all you college students looking for
+      good movie recommendations, I hope to make my website the go-to spot for
+      suggestions. <br /><span class="staytuned">Stay tuned!</span>
       <br />
-      For now, here is one of my favorite movies of all time: <br />
+      For now, here is the recommended movie of the month: <br />
       <iframe
         width="560"
         height="315"
@@ -72,7 +184,32 @@
       <br />
       <span class="beautifulmind">A Beautiful Mind</span>
     </p>
+
     <hr />
+
+    <div>
+      <p>
+        <a href="moviereviews.html#watchlist"
+          ><img
+            id="watchlist"
+            src="files/watchlist.png"
+            alt="watchlist"
+            title="Watchlist"
+        /></a>
+      </p>
+      <p>
+        <img
+          src="files/avengers.jpg"
+          alt="Slideshow of movies"
+          title="movieslideshow"
+          id="movie-slide"
+        />
+      </p>
+      <p id="movie-title"></p>
+    </div>
+
+    <hr />
+
     <map name="theatre">
       <area
         shape="rect"
